@@ -1,0 +1,21 @@
+{{#if products}}
+    {{#each products}}
+        <div>
+            <p>{{this.title}} ${{this.price}}</p>
+            <form action="/api/carts/64aac67fe5099ade10431358/product/{{this._id}}" method="POST">
+                <button type="submit">Agregar al carrito</button>
+            </form>
+        </div>
+    {{/each}}
+{{else}}
+    <p>No hay productos</p>
+{{/if}}
+
+<div>
+    {{#if productsPages.hasPrevPage}}
+        <a href="/api/products?page={{productsPages.prevPage}}">Anterior</a>
+    {{/if}}
+    {{#if productsPages.hasNextPage}}
+        <a href="/api/products?page={{productsPages.nextPage}}">Siguiente</a>
+    {{/if}}
+</div>
