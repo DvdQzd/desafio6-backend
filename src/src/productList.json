@@ -1,0 +1,38 @@
+[
+	{
+		"title": "Jamon natural",
+		"description": "Jamon natural embasado al vacio de 150grs",
+		"price": 3500,
+		"thumbnail": [
+			"url foto"
+		],
+		"code": "abc123",
+		"quantity": 0,
+		"stock": 20,
+		"id": 1
+	},
+	{
+		"title": "Queso Dambo",
+		"description": "Pedaso de queso Dambo embaso con un peso de 300grs",
+		"price": 3500,
+		"thumbnail": [
+			"url foto"
+		],
+		"code": "abc124",
+		"quantity": 0,
+		"stock": 20,
+		"id": 2
+	},
+	{
+		"title": "Pan",
+		"description": "Baguette de pan frances",
+		"price": 400,
+		"thumbnail": [
+			"url foto"
+		],
+		"code": "abc125",
+		"quantity": 0,
+		"stock": 20,
+		"id": 3
+	}
+]
