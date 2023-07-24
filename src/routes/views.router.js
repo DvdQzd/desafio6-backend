@@ -21,9 +21,15 @@ router.get('/login', publicAccess, (req, res) => {
 })
 
 router.get('/', privateAccess, (req, res) => {
-    res.render('profile', {
-        user: req.session.user
-    });
-})
+    try {
+        console.log(JSON.stringify(req.session.user, null, 2));
+        res.render('profile', {
+            user: req.session.user
+        });
+    } catch (error) {
+        console.log(error)
+    }
+    
+});
 
 export default router;

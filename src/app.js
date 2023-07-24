@@ -12,6 +12,8 @@ import {Server} from "socket.io"
 import MongoStore from "connect-mongo";
 import mongoose from "mongoose";
 import displayRoutes from "express-routemap";
+import passport from "passport";
+import initializePassport from "./config/passport.config.js";
 
 const app = express()
 const PORT = 8080
@@ -40,6 +42,9 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }))
+initializePassport()
+app.use(passport.initialize())
+app.use(passport.session())
 
 app.use(express.json())
 app.use("/", viewsRouter)
